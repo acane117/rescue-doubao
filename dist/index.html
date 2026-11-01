@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f8f4ea"><meta name="description" content="营救豆包：叫上朋友组成奶蛙小队，一起闯过七章冒险。1–4 人联机合作，输入房间码即可加入。">
+  <meta property="og:title" content="营救豆包"><meta property="og:site_name" content="营救豆包"><meta property="og:type" content="website">
+  <meta property="og:description" content="叫上朋友组成奶蛙小队，一起营救豆包！1–4 人联机合作，手机电脑都能玩。">
+  <meta property="og:url" content="https://rescue-doubao.netlify.app/">
+  <meta name="twitter:card" content="summary"><meta name="twitter:title" content="营救豆包"><meta name="twitter:description" content="叫上朋友组成奶蛙小队，一起营救豆包！1–4 人联机合作，手机电脑都能玩。">
+  <title>营救豆包</title><link rel="stylesheet" href="./style.css?v=5">
+  <script defer src="./vendor/peerjs.min.js"></script><script type="module" src="./app.js?v=5"></script>
+</head>
+<body>
+<main id="home">
+  <div class="home-art" aria-hidden="true"></div>
+  <header class="brand"><span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 22c0-9 3-16 10-16s10 7 10 16c0 5-4 7-10 7S6 27 6 22Z" fill="#f6c953"/><circle cx="12" cy="9" r="4" fill="#f6c953"/><circle cx="21" cy="9" r="4" fill="#f6c953"/><circle cx="12.5" cy="9" r="2" fill="#344f3a"/><circle cx="21.5" cy="9" r="2" fill="#344f3a"/><ellipse cx="16" cy="22" rx="7" ry="5" fill="#fff4c8"/></svg></span><span>营救豆包 <small>好友合作冒险</small></span><span class="version"><i></i> 好朋友，一起上</span><button class="round-button sound-button" data-audio-toggle aria-label="关闭声音" title="关闭声音" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="sound-wave" d="M16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-slash" d="m16 9 6 6m0-6-6 6"/></svg></button></header>
+  <section class="landing">
+    <div class="intro"><p class="eyebrow"><span>好友合作冒险</span> 1–4 人 · 手机 / 电脑</p><h1>豆包等着呢，<br><span>一起去营救。</span></h1><p class="lead">叫上朋友，从奶笑村出发。<br>一路冲撞、大笑，把魔王也逗笑。</p>
+      <div class="hero-party" aria-hidden="true"><div class="hero-figure hero-friend"></div><div class="hero-figure hero-main"></div><div class="hero-figure hero-friend second"></div><span class="party-stamp">这次，有队友了！<i>✦</i></span></div>
+      <div class="feature-strip"><span><i>✓</i> 七章一起闯</span><span><i>♡</i> 倒下了，队友扶</span><span><i>↻</i> 失败了，再来一次</span></div>
+    </div>
+    <div class="room-card">
+      <div id="entry-panel"><p class="eyebrow">准备好了吗？</p><h2>组一支奶蛙小队<span>✦</span></h2><p class="card-subtitle">开个房间，等朋友一起出发。</p>
+        <label class="field-label" for="nickname">你的勇者昵称</label><input id="nickname" maxlength="12" autocomplete="nickname" placeholder="给自己取个名字" value="奶蛙勇者">
+        <button id="create" class="primary">创建房间 <span>→</span></button>
+        <div class="divider"><span>已经有房间了？</span></div>
+        <label class="field-label" for="room-input">朋友发来的 6 位房间码</label><div class="join-row"><input id="room-input" maxlength="6" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="输入房间码"><button id="join" class="secondary">加入</button></div>
+        <button id="solo" class="text-button">先一个人练练 →</button>
+      </div>
+      <div id="lobby-panel" hidden><p class="eyebrow">你的小队，在这里集合</p><div class="room-heading"><h2>营救小队</h2><span id="member-count">1 / 4</span></div>
+        <div class="code-box"><div><small>房间码</small><strong id="room-code"></strong></div><button id="copy" class="icon-button" aria-label="复制邀请链接">复制邀请 ↗</button></div>
+        <div id="members"></div><p id="lobby-tip" class="muted"></p><button id="start" class="primary">全员出发 <span>→</span></button><button id="ready" class="primary" hidden>我准备好了</button><button id="leave" class="text-button">离开房间</button>
+      </div>
+      <p id="connection-status" role="status" class="connection-status">免下载 · 电脑与手机可一起玩</p>
+      <div class="rule-note"><span>小队越热闹，冒险越精彩</span><p>怪物随人数增加 · 队友奶球会造成 50% 误伤</p></div>
+    </div>
+  </section>
+  <footer><span>笑声不打烊，冒险刚刚好。</span><button id="help-open" class="text-button">操作指南 ↗</button></footer>
+</main>
+<section id="game" hidden aria-label="合作战斗">
+  <div id="stage"><canvas id="canvas" width="1280" height="720" aria-label="奶蛙合作战斗画面"></canvas>
+    <div class="game-top"><div id="team-hud"></div><div class="chapter-info"><span id="chapter-name">奶笑村</span><small id="wave-info"></small></div><div class="game-tools"><button class="round-button sound-button" data-audio-toggle aria-label="关闭声音" title="关闭声音" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="sound-wave" d="M16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-slash" d="m16 9 6 6m0-6-6 6"/></svg></button><button id="fullscreen" class="round-button" aria-label="切换全屏">⛶</button><button id="pause" class="round-button" aria-label="暂停或继续">Ⅱ</button><button id="game-exit" class="round-button" aria-label="离开对局">↗</button></div></div>
+    <div id="boss-hud" hidden><span id="boss-name"></span><div class="boss-track"><i id="boss-fill"></i></div><small id="boss-numbers"></small></div>
+    <div id="chapter-banner" hidden></div>
+    <div class="game-bottom"><div id="ability-status"></div><div class="keyboard-hint"><kbd>W A S D</kbd> 移动 <span>·</span> <kbd>H</kbd> 扶起队友 <span>·</span> <kbd>ESC</kbd> 暂停</div></div>
+    <div id="desktop-actions" class="skill-bar"><button data-hold="attack" aria-label="按住发射奶球"><span>◎</span><b>奶球</b><kbd>F</kbd></button><button data-hold="defend" aria-label="按住防御"><span>◇</span><b>防御</b><kbd>SPACE</kbd></button><button data-action="dash" data-skill="dash"><span>»</span><b>冲撞</b><kbd>SHIFT</kbd></button><button data-action="laugh" data-skill="laugh"><span>☺</span><b>大笑</b><kbd>E</kbd></button><button data-action="peach"><span>♡</span><b>罐头</b><kbd>C</kbd></button><button data-action="naidan"><span>✦</span><b>奶蛋</b><kbd>V</kbd></button></div>
+    <div id="touch-controls"><div id="joystick" aria-label="拖动摇杆移动"><div id="knob"></div></div><div class="touch-actions"><button data-hold="revive" class="mini-touch">扶起</button><button data-action="peach" class="mini-touch">罐头</button><button data-action="naidan" class="mini-touch">奶蛋</button><button data-action="joke" id="joke-touch" class="mini-touch" hidden>讲笑话</button><button data-hold="defend">防御</button><button data-action="dash" id="dash-touch">冲撞</button><button data-action="laugh" id="laugh-touch">大笑</button><button data-hold="attack" class="attack-touch">奶球</button></div></div>
+    <div id="game-modal" hidden><div class="battle-modal"><p id="modal-eyebrow" class="eyebrow"></p><h2 id="modal-title"></h2><p id="modal-description"></p><div id="upgrade-cards"></div><div id="modal-actions"></div></div></div>
+  </div>
+</section>
+<dialog id="help"><button id="help-close" class="close-dialog" aria-label="关闭说明">×</button><p class="eyebrow">你的第一份营救指南</p><h2>一起笑，一起赢。</h2><p>房主创建房间，把邀请链接或 6 位房间码发给朋友。所有人准备后，由房主开始。</p><p>电脑用 WASD 移动，按住 F 发射奶球，空格防御，Shift 冲撞，E 大笑，C 回满血，V 召唤奶蛋。最终战按 Q 讲笑话，蓄满后再按 Q，随后连按 R 维持大笑。</p><p>手机用左侧摇杆移动、右侧按钮施放技能。队友倒下后靠近，按住 H 或“扶起”3 秒。全队倒下后，房主可以免费重试本关。</p><p>每关开始按在线人数确定怪物倍率，中途掉线不会改变本关血量。房主离开后本局结束。联机使用浏览器直连，严格受限的网络可能无法连接。</p></dialog>
+<div id="toast" role="status" hidden></div>
+<div id="audio-bank" hidden aria-hidden="true"></div>
+</body></html>

@@ -1,0 +1,600 @@
+{
+  "project": "营救豆包",
+  "version": "0.5.0",
+  "snapshot_date": "2026-11-01",
+  "time_zone": "Asia/Shanghai",
+  "algorithm": "SHA-256",
+  "excluded": [
+    "SNAPSHOT.json",
+    "local Git/hosting state",
+    "environment files",
+    "archives"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 242,
+      "sha256": "c08f0fa189c9d5fb923e026f27adb121d602cf9b04ffab0733985fb87e6bd4c5"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "bytes": 385,
+      "sha256": "62887d4271842227763bd047c10841aabdd0f8dbe0e00f63b4cbb554e2d7913f"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "bytes": 405,
+      "sha256": "143aeae95ee0f4d39a16d68bbcff8d7231e1ba9232173af7402d2ef33dcc8452"
+    },
+    {
+      "path": ".github/workflows/checks.yml",
+      "bytes": 410,
+      "sha256": "c3995c739bc51e6a00f5250ffc5c3e02cbd3ac4d1b7fa6bfc8972512ce05c5b3"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 122,
+      "sha256": "6391902417c1bc8a197dfa75ce3ecb1cbe2993493a02437c9b59c32a8c2b7995"
+    },
+    {
+      "path": "art/hero-hd-prompt.txt",
+      "bytes": 1910,
+      "sha256": "88b3cd5b08b7b221d7b0248dfbc9e2491fcf20be2809daf31896e3d7dee079f5"
+    },
+    {
+      "path": "art/hero-motion-v3-prompts.txt",
+      "bytes": 3336,
+      "sha256": "6132d680f36cc4835da0255d416c7a894180320c40dc2ffa663d166ab603cf5d"
+    },
+    {
+      "path": "art/original-audio-sources.json",
+      "bytes": 1446,
+      "sha256": "f0e9d7454cc43dd1fd20a07c55ca179d38123dcf6214664238f85e4141a7fe67"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 2277,
+      "sha256": "ce6671894ecd6808c85d32597878087bbe0f18ca9a81994021f6b47a1613f2e7"
+    },
+    {
+      "path": "dist/_headers",
+      "bytes": 235,
+      "sha256": "4765349ffa86f46d64df8f795af28857c2b98fd4c139e8016c6443dd61c64c13"
+    },
+    {
+      "path": "dist/app.js",
+      "bytes": 17927,
+      "sha256": "424028ca9f27da9dd3f020078e04fa478e743594717bef0bf8c5e3ec18c6688e"
+    },
+    {
+      "path": "dist/asset-manifest.json",
+      "bytes": 2254,
+      "sha256": "1c0676dab88061b79e6885672f023053b084ed916c1dbd7665c6d2b5da80da58"
+    },
+    {
+      "path": "dist/assets/audio/death-theme.mp3",
+      "bytes": 3372852,
+      "sha256": "b3e96a6b118c5b1b4ac3d672764304a7bdebeaf8bcce31601ea52bdbf59686c9"
+    },
+    {
+      "path": "dist/assets/audio/dog-call.mp3",
+      "bytes": 19042,
+      "sha256": "c442fdf7a2e4c8bb738d7a0fe5815d4114a351b67edcc8024b245a2b3fb1793d"
+    },
+    {
+      "path": "dist/assets/audio/laugh.mp3",
+      "bytes": 13766,
+      "sha256": "364ce7dd3e19c196d5337c599fda98f6068d36cc2bd0a875e764675f21a51336"
+    },
+    {
+      "path": "dist/assets/audio/naidan-sequence-v241.mp3",
+      "bytes": 84661,
+      "sha256": "178303d48e870f3b75c8bbf4fd493b018b2966772df6f327c0902aee73901d6a"
+    },
+    {
+      "path": "dist/assets/audio/normal-theme.mp3",
+      "bytes": 870438,
+      "sha256": "0724ff890f6a38ca08ec7ad6c463008f3820219ad277cfae60f845ecb8db3a40"
+    },
+    {
+      "path": "dist/assets/audio/penguin-death.mp3",
+      "bytes": 6098,
+      "sha256": "7154e3d5d1fe2b29d6dd3fe65c89917c0f904d483721de1d526df13fa4e88bb3"
+    },
+    {
+      "path": "dist/assets/audio/penguin-rage.mp3",
+      "bytes": 57568,
+      "sha256": "c8c9af878f98f4c86a9428c6073474737d940a00066af1e6b10262dc7983cbfe"
+    },
+    {
+      "path": "dist/assets/audio/super-laugh.mp3",
+      "bytes": 123115,
+      "sha256": "d2bd7a3bd2f3a99305633e6ac7fb11752a457c42110aa5470b603b4909ea25f9"
+    },
+    {
+      "path": "dist/assets/backgrounds/bridge.webp",
+      "bytes": 103214,
+      "sha256": "f4a06a3cfe81b9c97bbea9704a7d4e1cc19ce35af47c418a352f96f21a6d3769"
+    },
+    {
+      "path": "dist/assets/backgrounds/cage-overlay.webp",
+      "bytes": 38994,
+      "sha256": "e1dfc71fc38458e217e9007fec3a8d331d504381503c3ba77f1307ed7cd17e29"
+    },
+    {
+      "path": "dist/assets/backgrounds/courtyard.webp",
+      "bytes": 146778,
+      "sha256": "394b10cb4cc679364e52917a5f7e8d53bbdf3a0401e3bbf5db82b56b269b3920"
+    },
+    {
+      "path": "dist/assets/backgrounds/forest.webp",
+      "bytes": 140164,
+      "sha256": "d53048df10a64381e0bc2e6a814a8cf4665e2152383bca69e9694016147a0eb0"
+    },
+    {
+      "path": "dist/assets/backgrounds/hall.webp",
+      "bytes": 136470,
+      "sha256": "8c0ad0be4098fcf92deb4a8e21b4e54bf648f5265cd8b36eef9a2909ec79b68c"
+    },
+    {
+      "path": "dist/assets/backgrounds/mountain.webp",
+      "bytes": 125124,
+      "sha256": "d34106cb3c6529479efaad63f3b8f3fe10cfa4c05a4ee158d0060f18fe24c881"
+    },
+    {
+      "path": "dist/assets/backgrounds/throne.webp",
+      "bytes": 151562,
+      "sha256": "af3747f3e5331147eafd872301151867e2fefe26513d1eaa4153ed0863723bfb"
+    },
+    {
+      "path": "dist/assets/backgrounds/village.webp",
+      "bytes": 175960,
+      "sha256": "3a925047b1171bd28444feae589aa3e1bc6ac74afd44984afad97480c0f4e314"
+    },
+    {
+      "path": "dist/assets/channels/leyuan233/story-cover.webp",
+      "bytes": 292970,
+      "sha256": "5ac9749613767e62fbc14fb0ca0afdd9a32c91df84d1212a456f4b37cff5061b"
+    },
+    {
+      "path": "dist/assets/characters/bell.webp",
+      "bytes": 45050,
+      "sha256": "ff1f2d941183ccebcaea91c21ee807ffbb4741551f711628424d7b9dd0aeb28a"
+    },
+    {
+      "path": "dist/assets/characters/bomber.webp",
+      "bytes": 49670,
+      "sha256": "1257e4a3e849f890c11cad5e67549b3f6ca0859f52dc4a6680e0633743c6799e"
+    },
+    {
+      "path": "dist/assets/characters/boss-laugh.webp",
+      "bytes": 61470,
+      "sha256": "cfd4a2f037c3d2c5bed18370562ba8e53e08b39ef273d6da3be4ca4d0d78a027"
+    },
+    {
+      "path": "dist/assets/characters/boss-variants/boss-attack.webp",
+      "bytes": 78976,
+      "sha256": "02323c5c5421efdd1e071ab2ac8bad91966c11d11ba8e8dd8aeb02d21b4c6e75"
+    },
+    {
+      "path": "dist/assets/characters/boss-variants/boss-phase2.webp",
+      "bytes": 75526,
+      "sha256": "e28797dd26ff10c9fce766dd5585aae2b85c51493f2a94682453de2a18e80d0c"
+    },
+    {
+      "path": "dist/assets/characters/boss-variants/captain-attack.webp",
+      "bytes": 51498,
+      "sha256": "93aecbbda61e93dad45c0c837234604bd71ce1f0e317b253c85f3c3e6f3696a7"
+    },
+    {
+      "path": "dist/assets/characters/boss-variants/captain-phase2.webp",
+      "bytes": 59452,
+      "sha256": "3a676963666ff8aa0a8c19c8ccd7a2d277ddb879aa153b6c339c9940e9bcb02a"
+    },
+    {
+      "path": "dist/assets/characters/boss-variants/general-attack.webp",
+      "bytes": 54190,
+      "sha256": "88a3b89c919b74e53d0794c63d961e3704085ff338266ba41f2f83d0b961cbb9"
+    },
+    {
+      "path": "dist/assets/characters/boss-variants/general-phase2.webp",
+      "bytes": 66294,
+      "sha256": "f9f2d4571bcf7ddbc3983e51bf5a895d15e4969f142a52575105e99faf9c9678"
+    },
+    {
+      "path": "dist/assets/characters/boss-variants/marshal-attack.webp",
+      "bytes": 69784,
+      "sha256": "d7cab528753e32d182cfa15a6af51e4ce9a6eda9bf7c97fec2d441c1cd8c8e3d"
+    },
+    {
+      "path": "dist/assets/characters/boss-variants/marshal-phase2.webp",
+      "bytes": 79990,
+      "sha256": "722281097552762137aeb9de162c71fc3a3e3567f1519e0948a1e9435f6fadd5"
+    },
+    {
+      "path": "dist/assets/characters/boss.webp",
+      "bytes": 66922,
+      "sha256": "8d8e211058a0cce6c18c64629ad9afe9ef98443def40fa10a6b4f6a3a9421eac"
+    },
+    {
+      "path": "dist/assets/characters/captain.webp",
+      "bytes": 55520,
+      "sha256": "f2191803c14d4f6540ad601719f9795bf59fdd7ad953cde010a1cee80dbdd205"
+    },
+    {
+      "path": "dist/assets/characters/chaser.webp",
+      "bytes": 52360,
+      "sha256": "d70f52e540603bcbb6ab6fc3575379a2bf93f980403ed10959deb9fe2b266d62"
+    },
+    {
+      "path": "dist/assets/characters/crate.webp",
+      "bytes": 3058,
+      "sha256": "897f891f328ca87ef94c94985597f5341b337756088b83583e35538d967684bb"
+    },
+    {
+      "path": "dist/assets/characters/dog.webp",
+      "bytes": 44526,
+      "sha256": "a7473c0603c03cac928c340952cb72e22fe4cbca7bf0ab672099c06cf14f3393"
+    },
+    {
+      "path": "dist/assets/characters/general.webp",
+      "bytes": 61312,
+      "sha256": "8c9cac0fe1cd5e2221deff88037d2d10bbfde42c4e9fd50bf76d69882f2c24a8"
+    },
+    {
+      "path": "dist/assets/characters/hammer.webp",
+      "bytes": 64112,
+      "sha256": "fd23864b43f2f02dbc9beb15798b1be4a8e011c67299d1aa30501de083cea423"
+    },
+    {
+      "path": "dist/assets/characters/hero-guard.webp",
+      "bytes": 59254,
+      "sha256": "fb304e581826dd31c25e828fdca0f187666d8d9050df92b79200c1b37e0be872"
+    },
+    {
+      "path": "dist/assets/characters/hero-hd.png",
+      "bytes": 1690584,
+      "sha256": "263f20deaa261ff60d8069dc65ba0ce2362e096102ea05d0f409411951b006e1"
+    },
+    {
+      "path": "dist/assets/characters/hero-idle.webp",
+      "bytes": 32422,
+      "sha256": "d0ab30eca489e7c11dd96bb760c3ea21296cfb1190c1859839c57e4db0dcdac2"
+    },
+    {
+      "path": "dist/assets/characters/hero-laugh.webp",
+      "bytes": 48284,
+      "sha256": "ebde9c8d17d00cf43e7eaa60a12291a10ba482caf96a7aca86c4595da6547bfe"
+    },
+    {
+      "path": "dist/assets/characters/hero-poses-v3.png",
+      "bytes": 999145,
+      "sha256": "becfe5abd9b9272db7786a405e3199a133ae1984987b7c8a5d58b9db9b865eb9"
+    },
+    {
+      "path": "dist/assets/characters/hero-poster.webp",
+      "bytes": 64834,
+      "sha256": "3519e79f10b308ec5286c59cd735f39d000bbf6a484bb457e423333287e04d7d"
+    },
+    {
+      "path": "dist/assets/characters/hero-run.webp",
+      "bytes": 50326,
+      "sha256": "9f3b0d0d2fa5c99259d9fa2178c4acca5fd97a06beb11fa2b4c08791cd851891"
+    },
+    {
+      "path": "dist/assets/characters/hero-walk-v3.png",
+      "bytes": 1103878,
+      "sha256": "6033d7109af4f75938c5cea71c0e023a2c26332fdfb978136014cdb9dc11e60e"
+    },
+    {
+      "path": "dist/assets/characters/hero.webp",
+      "bytes": 6650,
+      "sha256": "e992d57524cf0cad0b131b04933c3f946fde506f2467b2550d6aa23757b4e30d"
+    },
+    {
+      "path": "dist/assets/characters/jester.webp",
+      "bytes": 63286,
+      "sha256": "fccd4679d391601b2351b21c31e19533e4b508421dd027f32199c902aec76f78"
+    },
+    {
+      "path": "dist/assets/characters/marshal.webp",
+      "bytes": 65748,
+      "sha256": "b615cf101f33ab33e0fd7e0c9a9d18a1baab0e1aca36c53656e65477ae973bb6"
+    },
+    {
+      "path": "dist/assets/characters/mimic.webp",
+      "bytes": 61180,
+      "sha256": "be123a863dd1a9b423e9c2656917794cc59f425404f18933510bede52fe93035"
+    },
+    {
+      "path": "dist/assets/characters/naidan-call.webp",
+      "bytes": 22112,
+      "sha256": "2d8b4ab6190ddb0a9f2d3ec0f6873c67eb55999804f09e99096167044a9faf20"
+    },
+    {
+      "path": "dist/assets/characters/naidan-idle.webp",
+      "bytes": 20662,
+      "sha256": "73fcd0b0d1d040e2753c52c94e3a46635dcf55c644874e19aa6a2dfb2bcc64af"
+    },
+    {
+      "path": "dist/assets/characters/naidan-laugh.webp",
+      "bytes": 22818,
+      "sha256": "9261b328699ed580374ad945bea06bfab77f84371d2c57b8c64cf9d299ea855d"
+    },
+    {
+      "path": "dist/assets/characters/penguin-rage.webp",
+      "bytes": 34310,
+      "sha256": "22e33ac98dea76ae5d159d142dcb714435d9736a07ec3d29d84efb608cc7c898"
+    },
+    {
+      "path": "dist/assets/characters/penguin.webp",
+      "bytes": 54214,
+      "sha256": "131d07283c15c9eb79ac13329a0206eebe14a2be44fe51f71eb0c7da9adec411"
+    },
+    {
+      "path": "dist/assets/characters/princess-laugh.webp",
+      "bytes": 32568,
+      "sha256": "3b72e7d44006d9b0be9419533a720292c4b390d150a7f04b85e2caa6d85b515a"
+    },
+    {
+      "path": "dist/assets/characters/princess.webp",
+      "bytes": 31292,
+      "sha256": "9e4460666ba1885f916e7d3c2c7054e81af7d22062c92e2bfc305335d0f239c3"
+    },
+    {
+      "path": "dist/assets/characters/scribe.webp",
+      "bytes": 45784,
+      "sha256": "e0bcfa88baad1bd81f5006deb75eb969b3682992e16ed5470a86fe9252b0d444"
+    },
+    {
+      "path": "dist/assets/characters/shield.webp",
+      "bytes": 60112,
+      "sha256": "44b6447e15f576137b8c2a0cc73ce50d33e8d65eff11988ac831666955f62e31"
+    },
+    {
+      "path": "dist/assets/characters/shooter.webp",
+      "bytes": 46334,
+      "sha256": "c0873a08eea874b33c03bac7081a4b5e2af058380ada1057f980efc215673505"
+    },
+    {
+      "path": "dist/audio-original.js",
+      "bytes": 16352,
+      "sha256": "e858e4a6cdb65050089090633cf8a3eb5cf89d7973f11872d1bd86e231203a14"
+    },
+    {
+      "path": "dist/audio.js",
+      "bytes": 6641,
+      "sha256": "5b0d2dca99afccc45d7d5740b62d4763c0afd6be1c54d4c2e75acec00af39c36"
+    },
+    {
+      "path": "dist/base.js",
+      "bytes": 63972,
+      "sha256": "b6c9a212553fef70fdc683484c5a144b9dce4f8b1ffb97df0e063dbb1949db76"
+    },
+    {
+      "path": "dist/coop.js",
+      "bytes": 15011,
+      "sha256": "b30863476c865ff5958698914a19958a582922b61d60f2694387da773a1398d0"
+    },
+    {
+      "path": "dist/CREDITS.md",
+      "bytes": 1060,
+      "sha256": "bd740063f5d494ff116789cca0ee64af53f0fc16e534ae487556474e70d29e7a"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 8884,
+      "sha256": "fde788ebab0db752685629e0a7651b3bdb65a32eb860450f695c1935c8dcbf55"
+    },
+    {
+      "path": "dist/mobile.js",
+      "bytes": 2536,
+      "sha256": "908fd93296ecf4ab966fb91e7df92208748c0ae4b1c47a1516e74c1d24ce574f"
+    },
+    {
+      "path": "dist/network.js",
+      "bytes": 7127,
+      "sha256": "f3b58b9e01da3a59644581afb0be8128de78a4fde50fd6eeb4194a11890ad388"
+    },
+    {
+      "path": "dist/render.js",
+      "bytes": 13718,
+      "sha256": "e2b183df352747cfac2956ebf7cbf237162cdc03898b103bb5b56c2c4390b74a"
+    },
+    {
+      "path": "dist/style.css",
+      "bytes": 24338,
+      "sha256": "d99999daf4b53a1eb81e0f1c30ef9f26fb95c698a2a8a74faa066544b4b5d703"
+    },
+    {
+      "path": "dist/vendor/peerjs.min.js",
+      "bytes": 86948,
+      "sha256": "7604d8c31bec4f134b0d15c2d80b1d095ea18af005354f439f14291fcd7b4168"
+    },
+    {
+      "path": "dist/vendor/peerjs.min.js.map",
+      "bytes": 588492,
+      "sha256": "54dafcd86388aa76a6e58525462e5d1a6941cf24e559123425d614a293b1af76"
+    },
+    {
+      "path": "dist/vendor/THIRD_PARTY_NOTICES.txt",
+      "bytes": 7794,
+      "sha256": "068f8d55a5d367077b5ad517e94990ff0b3684cc167a59d271082d931bc07e25"
+    },
+    {
+      "path": "dist/view.js",
+      "bytes": 1817,
+      "sha256": "6e4c4144d62825c50d7d325372767f2f0e415465cc72dd761bd7e2147b9bdf0b"
+    },
+    {
+      "path": "docs/DEVELOPMENT_HISTORY.md",
+      "bytes": 8379,
+      "sha256": "bbf95ff0b574c47f076ab78dc3af4cb81bc99654e82bfa6a5f0b22677e4474d7"
+    },
+    {
+      "path": "docs/previews/home.png",
+      "bytes": 39223,
+      "sha256": "bc4f5d7d1a007d7d74005a75754dfed725e8e1f3e42c0bef9d2c051110eaf0c8"
+    },
+    {
+      "path": "docs/previews/mobile-landscape.png",
+      "bytes": 57974,
+      "sha256": "6c14fa254aa3ab75234d679806e3c8b7ba815e7cb95eb0a378a838f135050e4f"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "bytes": 1229,
+      "sha256": "57873b5a9cb9a6b353881826e63a81165c10870d635ac3a5f1f99ef3f968e045"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 1091,
+      "sha256": "e6718aacf1913ff912790ce7a9f1a1d8d1ab980d18b528a778f16fae711ef4d4"
+    },
+    {
+      "path": "LICENSES/eventemitter3-4.0.7.txt",
+      "bytes": 1082,
+      "sha256": "3aecc12b1cb28832b5f65ab64291de96568c3f236a74d646281b4491f7bcadbf"
+    },
+    {
+      "path": "LICENSES/msgpack-msgpack-2.8.0.txt",
+      "bytes": 740,
+      "sha256": "d95a411bcdadac85d678a99367ff51719e53539fa5ee9994943cd760c4ae64e4"
+    },
+    {
+      "path": "LICENSES/PeerJS-1.5.5-MIT.txt",
+      "bytes": 1108,
+      "sha256": "9407807dba7f47a79bfb3ac55759d63d77c9371ebd0616d5a093e97d3e810397"
+    },
+    {
+      "path": "LICENSES/peerjs-js-binarypack-2.1.0.txt",
+      "bytes": 1093,
+      "sha256": "9517e6f46b30231a62407f94a8c7adf8b4d14038c01807cd769f1d4de5911ba4"
+    },
+    {
+      "path": "LICENSES/sdp-3.2.0.txt",
+      "bytes": 1058,
+      "sha256": "798e82590af6a84bfbde3d6bb0fb9162c519edf16122404fea00acefdc55cbd9"
+    },
+    {
+      "path": "LICENSES/webrtc-adapter-9.0.1.txt",
+      "bytes": 1584,
+      "sha256": "00a46c6cfc219593b97586398b477e188391556e70487225d3ff9d60ccda6dce"
+    },
+    {
+      "path": "netlify.toml",
+      "bytes": 27,
+      "sha256": "a35543cf4c53139407e626c348583dc63abb5722d0ac92f2f72f8fa58773543b"
+    },
+    {
+      "path": "package.json",
+      "bytes": 537,
+      "sha256": "c1fc1186d147fe4e103e903d107cf862ed362aef6d9485f95b8e3ce7d78007e4"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "bytes": 30543,
+      "sha256": "10df973415e749e396b856ce2889a6f9babd6afa9c34e60c9afddd036a373fb1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5722,
+      "sha256": "811c024b67ee71fc0405dc81c9305c04c9d791f4c0d0738c2be31c9b71c09f34"
+    },
+    {
+      "path": "serve.mjs",
+      "bytes": 1034,
+      "sha256": "d0b0e009a5fa594ace38c50c1ee4661e161e4028a11ce416b850a76e97945d71"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 4869,
+      "sha256": "7397d5ce227e5f22612c6d1841a3926d10b3b9719826647ce319b33577abffa9"
+    },
+    {
+      "path": "tests/audio.test.mjs",
+      "bytes": 7502,
+      "sha256": "2e83f4b1e3b06d34bdf38c260c6fc00d2feae4f5715524eff0a18da9cdcef415"
+    },
+    {
+      "path": "tests/coop.test.mjs",
+      "bytes": 7473,
+      "sha256": "12c87234a4a3c56028e3f8ef5240ffaabab9ab60d98c3b83032fc529810f5f21"
+    },
+    {
+      "path": "tests/mobile.test.mjs",
+      "bytes": 1450,
+      "sha256": "0d7cf96d7a98241818af18b88ec830223957f04a7e4548fca0290906f3d1392b"
+    },
+    {
+      "path": "tests/network.test.mjs",
+      "bytes": 4854,
+      "sha256": "5ffc60518c2f0663dd1b42b82244ac974cdc1e8fe20f5d30e56fd7b9a09ea252"
+    },
+    {
+      "path": "tests/render.test.mjs",
+      "bytes": 3135,
+      "sha256": "ea0da9f60818f2841a5ca2c39b944010af5e57c99bd67a2827e44169d3abfc07"
+    },
+    {
+      "path": "tests/view.test.mjs",
+      "bytes": 2602,
+      "sha256": "e5eaebd85af617c596112e8de1c766cf9ef50da74ba70e3a21f08e6f60cb1259"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1713,
+      "sha256": "6133d7df9d287f4051666f65a5570e789f094fc12413763473ced5baefed805b"
+    },
+    {
+      "path": "tools/check.mjs",
+      "bytes": 1502,
+      "sha256": "27c64112dad996bb280e3b6718e18853f200b41f7f3e3fbcb7e852c1e6b3bf58"
+    },
+    {
+      "path": "tools/snapshot.mjs",
+      "bytes": 2459,
+      "sha256": "d98d2cb63d7892a884bf6606a391820049da3a032737a874d306964ebcbe984e"
+    },
+    {
+      "path": "upstream/game-BDvRcsxG.js",
+      "bytes": 74893,
+      "sha256": "7e450c52cd2be7ad5cc7e4119bc391d1dceecdb3faf75d1b3dde78161dae2d83"
+    },
+    {
+      "path": "upstream/game-DhG0Y0Ys.css",
+      "bytes": 11067,
+      "sha256": "cf0ab9aa1894082706aa62e9b2ac6c3e5bced894c597cfd16f38bb3ac0647661"
+    },
+    {
+      "path": "upstream/index.html",
+      "bytes": 1263,
+      "sha256": "50528e03773ea6989454e1fa58c1eb99b0a9063bc7b17a2c320475e48ccc477b"
+    },
+    {
+      "path": "upstream/main-B4FeNT19.css",
+      "bytes": 57710,
+      "sha256": "9fbb5719d2f5d53b0d2ada1b101a10ce48ff3bd9410ccb1670758196b0c188b5"
+    },
+    {
+      "path": "upstream/main-BsKo9vWW.js",
+      "bytes": 146947,
+      "sha256": "70dcfa4a8cd455ec9c2a0a018b72a705a98a860e02b30fbf5de7918b2c8f7005"
+    },
+    {
+      "path": "upstream/vendor/dependency-license-sources.json",
+      "bytes": 1203,
+      "sha256": "ddbc901700221897d13f6590ccbe2447d5398d27577d7cbd4092e2e100224299"
+    },
+    {
+      "path": "upstream/vendor/peerjs-1.5.5-package-lock.json",
+      "bytes": 602356,
+      "sha256": "95415a040472852e79d7337dd0ea34206c30bbcd2a407a91b9fbd76000795cb0"
+    },
+    {
+      "path": "upstream/vendor/peerjs-1.5.5-package.json",
+      "bytes": 6837,
+      "sha256": "971f9e0e66fea49c8d495ae3b614b1209d22662861ab02de572f960362506635"
+    }
+  ]
+}

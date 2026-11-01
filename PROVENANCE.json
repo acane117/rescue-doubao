@@ -1,0 +1,753 @@
+{
+  "project": "营救豆包",
+  "version": "0.5.0",
+  "record_date": "2026-11-01",
+  "original_title": "勇者奶蛙传：关于如何从憋笑魔王手中救下公主这件事",
+  "original_entry_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/index.html",
+  "original_author": "未核实",
+  "original_license": "未核实",
+  "ai_assistance": "Codex implementation assistance and built-in imagegen character derivations",
+  "files": [
+    {
+      "file": ".gitattributes",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": ".github/PULL_REQUEST_TEMPLATE.md",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": ".github/workflows/checks.yml",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": ".gitignore",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "art/hero-hd-prompt.txt",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "art/hero-motion-v3-prompts.txt",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "art/original-audio-sources.json",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "CONTRIBUTING.md",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/_headers",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/app.js",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/asset-manifest.json",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/assets/audio/death-theme.mp3",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/audio/death-theme.mp3",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/audio/dog-call.mp3",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/audio/dog-call.mp3",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/audio/laugh.mp3",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/audio/laugh.mp3",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/audio/naidan-sequence-v241.mp3",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/audio/naidan-sequence-v241.mp3",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/audio/normal-theme.mp3",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/audio/normal-theme.mp3",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/audio/penguin-death.mp3",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/audio/penguin-death.mp3",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/audio/penguin-rage.mp3",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/audio/penguin-rage.mp3",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/audio/super-laugh.mp3",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/audio/super-laugh.mp3",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/backgrounds/bridge.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/backgrounds/bridge.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/backgrounds/cage-overlay.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/backgrounds/cage-overlay.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/backgrounds/courtyard.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/backgrounds/courtyard.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/backgrounds/forest.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/backgrounds/forest.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/backgrounds/hall.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/backgrounds/hall.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/backgrounds/mountain.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/backgrounds/mountain.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/backgrounds/throne.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/backgrounds/throne.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/backgrounds/village.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/backgrounds/village.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/channels/leyuan233/story-cover.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/channels/leyuan233/story-cover.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/bell.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/bell.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/bomber.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/bomber.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/boss-laugh.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/boss-laugh.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/boss-variants/boss-attack.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/boss-variants/boss-attack.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/boss-variants/boss-phase2.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/boss-variants/boss-phase2.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/boss-variants/captain-attack.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/boss-variants/captain-attack.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/boss-variants/captain-phase2.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/boss-variants/captain-phase2.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/boss-variants/general-attack.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/boss-variants/general-attack.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/boss-variants/general-phase2.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/boss-variants/general-phase2.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/boss-variants/marshal-attack.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/boss-variants/marshal-attack.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/boss-variants/marshal-phase2.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/boss-variants/marshal-phase2.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/boss.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/boss.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/captain.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/captain.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/chaser.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/chaser.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/crate.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/crate.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/dog.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/dog.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/general.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/general.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/hammer.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hammer.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/hero-guard.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-guard.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/hero-hd.png",
+      "kind": "ai-generated-derived-art",
+      "tool": "OpenAI built-in imagegen",
+      "prompt_file": "art/hero-hd-prompt.txt",
+      "license_status": "project-license-not-selected; underlying-character-rights-unconfirmed",
+      "reference_files": [
+        "dist/assets/characters/hero-poster.webp",
+        "dist/assets/characters/hero-idle.webp"
+      ],
+      "original_character_reference_urls": [
+        "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-poster.webp",
+        "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-idle.webp"
+      ]
+    },
+    {
+      "file": "dist/assets/characters/hero-idle.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-idle.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/hero-laugh.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-laugh.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/hero-poses-v3.png",
+      "kind": "ai-generated-derived-art",
+      "tool": "OpenAI built-in imagegen",
+      "prompt_file": "art/hero-motion-v3-prompts.txt",
+      "license_status": "project-license-not-selected; underlying-character-rights-unconfirmed",
+      "reference_files": [
+        "dist/assets/characters/hero-walk-v3.png"
+      ],
+      "original_character_reference_urls": [
+        "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-poster.webp",
+        "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-idle.webp"
+      ]
+    },
+    {
+      "file": "dist/assets/characters/hero-poster.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-poster.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/hero-run.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-run.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/hero-walk-v3.png",
+      "kind": "ai-generated-derived-art",
+      "tool": "OpenAI built-in imagegen",
+      "prompt_file": "art/hero-motion-v3-prompts.txt",
+      "license_status": "project-license-not-selected; underlying-character-rights-unconfirmed",
+      "reference_files": [
+        "dist/assets/characters/hero-hd.png",
+        "dist/assets/characters/hero-run.webp"
+      ],
+      "original_character_reference_urls": [
+        "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-poster.webp",
+        "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero-run.webp"
+      ]
+    },
+    {
+      "file": "dist/assets/characters/hero.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/hero.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/jester.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/jester.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/marshal.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/marshal.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/mimic.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/mimic.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/naidan-call.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/naidan-call.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/naidan-idle.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/naidan-idle.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/naidan-laugh.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/naidan-laugh.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/penguin-rage.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/penguin-rage.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/penguin.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/penguin.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/princess-laugh.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/princess-laugh.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/princess.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/princess.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/scribe.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/scribe.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/shield.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/shield.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/assets/characters/shooter.webp",
+      "kind": "upstream-asset",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/characters/shooter.webp",
+      "license_status": "unconfirmed"
+    },
+    {
+      "file": "dist/audio-original.js",
+      "kind": "upstream-extracted-code",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/main-BsKo9vWW.js",
+      "license_status": "unconfirmed",
+      "changes": "提取原声音控制器和合成参数，补充模块导出与兼容入口"
+    },
+    {
+      "file": "dist/audio.js",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/base.js",
+      "kind": "upstream-adapted-code",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/game-BDvRcsxG.js",
+      "license_status": "unconfirmed",
+      "changes": "提取战斗内核，拆分玩家更新，接入合作调度与扩大地图边界，更新显示文字"
+    },
+    {
+      "file": "dist/coop.js",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/CREDITS.md",
+      "kind": "project-attribution-documentation",
+      "origin": "根据 SOURCES.md 整理，便于静态发布时保留来源"
+    },
+    {
+      "file": "dist/index.html",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/mobile.js",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/network.js",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/render.js",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/style.css",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "dist/vendor/peerjs.min.js",
+      "kind": "third-party-bundle",
+      "component": "PeerJS",
+      "version": "1.5.5",
+      "source_url": "https://unpkg.com/peerjs@1.5.5/dist/peerjs.min.js",
+      "license_file": "LICENSES/PeerJS-1.5.5-MIT.txt"
+    },
+    {
+      "file": "dist/vendor/peerjs.min.js.map",
+      "kind": "third-party-bundle",
+      "component": "PeerJS",
+      "version": "1.5.5",
+      "source_url": "https://unpkg.com/peerjs@1.5.5/dist/peerjs.min.js.map",
+      "license_file": "LICENSES/PeerJS-1.5.5-MIT.txt"
+    },
+    {
+      "file": "dist/vendor/THIRD_PARTY_NOTICES.txt",
+      "kind": "third-party-license-compilation",
+      "source_files": [
+        "LICENSES/PeerJS-1.5.5-MIT.txt",
+        "LICENSES/peerjs-js-binarypack-2.1.0.txt",
+        "LICENSES/eventemitter3-4.0.7.txt",
+        "LICENSES/webrtc-adapter-9.0.1.txt",
+        "LICENSES/sdp-3.2.0.txt",
+        "LICENSES/msgpack-msgpack-2.8.0.txt"
+      ],
+      "note": "各原许可证原文串联保留，供仅部署 dist 时使用"
+    },
+    {
+      "file": "dist/view.js",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "docs/DEVELOPMENT_HISTORY.md",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "docs/previews/home.png",
+      "kind": "project-screenshot",
+      "subject": "当前成果界面，包含上述原资源与 AI 衍生角色",
+      "license_status": "underlying-content-rights-as-noted-in-SOURCES.md"
+    },
+    {
+      "file": "docs/previews/mobile-landscape.png",
+      "kind": "project-screenshot",
+      "subject": "当前成果界面，包含上述原资源与 AI 衍生角色",
+      "license_status": "underlying-content-rights-as-noted-in-SOURCES.md"
+    },
+    {
+      "file": "docs/ROADMAP.md",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "LICENSE.md",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "LICENSES/eventemitter3-4.0.7.txt",
+      "kind": "third-party-license",
+      "component": "eventemitter3",
+      "version": "4.0.7",
+      "source_url": "https://unpkg.com/eventemitter3@4.0.7/LICENSE"
+    },
+    {
+      "file": "LICENSES/msgpack-msgpack-2.8.0.txt",
+      "kind": "third-party-license",
+      "component": "@msgpack/msgpack",
+      "version": "2.8.0",
+      "source_url": "https://unpkg.com/@msgpack/msgpack@2.8.0/LICENSE"
+    },
+    {
+      "file": "LICENSES/PeerJS-1.5.5-MIT.txt",
+      "kind": "third-party-license",
+      "source_url": "https://unpkg.com/peerjs@1.5.5/LICENSE"
+    },
+    {
+      "file": "LICENSES/peerjs-js-binarypack-2.1.0.txt",
+      "kind": "third-party-license",
+      "component": "peerjs-js-binarypack",
+      "version": "2.1.0",
+      "source_url": "https://unpkg.com/peerjs-js-binarypack@2.1.0/LICENSE"
+    },
+    {
+      "file": "LICENSES/sdp-3.2.0.txt",
+      "kind": "third-party-license",
+      "component": "sdp",
+      "version": "3.2.0",
+      "source_url": "https://unpkg.com/sdp@3.2.0/LICENSE"
+    },
+    {
+      "file": "LICENSES/webrtc-adapter-9.0.1.txt",
+      "kind": "third-party-license",
+      "component": "webrtc-adapter",
+      "version": "9.0.1",
+      "source_url": "https://unpkg.com/webrtc-adapter@9.0.1/LICENSE.md"
+    },
+    {
+      "file": "netlify.toml",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "package.json",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "README.md",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "serve.mjs",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "SOURCES.md",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "tests/audio.test.mjs",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "tests/coop.test.mjs",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "tests/mobile.test.mjs",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "tests/network.test.mjs",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "tests/render.test.mjs",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "tests/view.test.mjs",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.md",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "tools/check.mjs",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "tools/snapshot.mjs",
+      "kind": "ai-assisted-project-implementation",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "upstream/game-BDvRcsxG.js",
+      "kind": "upstream-build-snapshot",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/game-BDvRcsxG.js",
+      "license_status": "unconfirmed",
+      "note": "公开压缩构建文件的本地参照快照，不是原作者开发工程"
+    },
+    {
+      "file": "upstream/game-DhG0Y0Ys.css",
+      "kind": "upstream-build-snapshot",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/game-DhG0Y0Ys.css",
+      "license_status": "unconfirmed",
+      "note": "公开压缩构建文件的本地参照快照，不是原作者开发工程"
+    },
+    {
+      "file": "upstream/index.html",
+      "kind": "upstream-build-snapshot",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/index.html",
+      "license_status": "unconfirmed",
+      "note": "公开压缩构建文件的本地参照快照，不是原作者开发工程"
+    },
+    {
+      "file": "upstream/main-B4FeNT19.css",
+      "kind": "upstream-build-snapshot",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/main-B4FeNT19.css",
+      "license_status": "unconfirmed",
+      "note": "公开压缩构建文件的本地参照快照，不是原作者开发工程"
+    },
+    {
+      "file": "upstream/main-BsKo9vWW.js",
+      "kind": "upstream-build-snapshot",
+      "source_url": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/assets/main-BsKo9vWW.js",
+      "license_status": "unconfirmed",
+      "note": "公开压缩构建文件的本地参照快照，不是原作者开发工程"
+    },
+    {
+      "file": "upstream/vendor/dependency-license-sources.json",
+      "kind": "project-documentation-or-metadata",
+      "origin": "本次需求提出者与 Codex 协作整理",
+      "license_status": "project-license-not-selected"
+    },
+    {
+      "file": "upstream/vendor/peerjs-1.5.5-package-lock.json",
+      "kind": "third-party-metadata",
+      "source_url": "https://raw.githubusercontent.com/peers/peerjs/v1.5.5/package-lock.json"
+    },
+    {
+      "file": "upstream/vendor/peerjs-1.5.5-package.json",
+      "kind": "third-party-metadata",
+      "source_url": "https://unpkg.com/peerjs@1.5.5/package.json"
+    }
+  ]
+}

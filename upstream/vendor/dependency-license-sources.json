@@ -1,0 +1,42 @@
+[
+  {
+    "name": "peerjs-js-binarypack",
+    "version": "2.1.0",
+    "license": "MIT",
+    "source_url": "https://unpkg.com/peerjs-js-binarypack@2.1.0/LICENSE",
+    "license_file": "LICENSES/peerjs-js-binarypack-2.1.0.txt",
+    "in_browser_bundle": true
+  },
+  {
+    "name": "eventemitter3",
+    "version": "4.0.7",
+    "license": "MIT",
+    "source_url": "https://unpkg.com/eventemitter3@4.0.7/LICENSE",
+    "license_file": "LICENSES/eventemitter3-4.0.7.txt",
+    "in_browser_bundle": true
+  },
+  {
+    "name": "webrtc-adapter",
+    "version": "9.0.1",
+    "license": "BSD-3-Clause",
+    "source_url": "https://unpkg.com/webrtc-adapter@9.0.1/LICENSE.md",
+    "license_file": "LICENSES/webrtc-adapter-9.0.1.txt",
+    "in_browser_bundle": true
+  },
+  {
+    "name": "sdp",
+    "version": "3.2.0",
+    "license": "MIT",
+    "source_url": "https://unpkg.com/sdp@3.2.0/LICENSE",
+    "license_file": "LICENSES/sdp-3.2.0.txt",
+    "in_browser_bundle": true
+  },
+  {
+    "name": "@msgpack/msgpack",
+    "version": "2.8.0",
+    "license": "ISC",
+    "source_url": "https://unpkg.com/@msgpack/msgpack@2.8.0/LICENSE",
+    "license_file": "LICENSES/msgpack-msgpack-2.8.0.txt",
+    "in_browser_bundle": false
+  }
+]

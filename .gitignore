@@ -1,0 +1,12 @@
+node_modules/
+.netlify/
+.openai/
+.env
+.env.*
+!.env.example
+netlify-site.json
+*.zip
+*.tar.gz
+coverage/
+.DS_Store
+Thumbs.db
