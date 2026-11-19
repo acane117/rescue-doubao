@@ -9,6 +9,7 @@ const elements=new Map();const $=s=>{if(!elements.has(s))elements.set(s,document
 let model=null,state=null,solo=false,inGame=false,ready=false,lobby=null,modalKey='',lastZone=-1,lastSend=0,lastPublish=0,toastTimer=0,lastHUD=0,lastHUDPhase='',accumulator=0;
 const receivedEffects=new Map(),teamNodes=[],abilityNodes=[];
 const renderer=new Renderer($('#canvas'));
+console.log('[rescue-doubao][assets] renderer-created',{at:new Date().toISOString()});
 const landscape=new LandscapeMode($('#game'),$('#stage'),()=>{renderer.resize();if(inGame)resetInput();});
 const audio=new GameAudio({mediaFactory:src=>{const track=new Audio(src);track.dataset.track=src.split('/').pop();$('#audio-bank').append(track);return track;},onChange:muted=>{
   for(const button of document.querySelectorAll('[data-audio-toggle]')){button.setAttribute('aria-label',muted?'开启声音':'关闭声音');button.setAttribute('title',muted?'开启声音':'关闭声音');button.setAttribute('aria-pressed',String(muted));button.classList.toggle('muted',muted);}
@@ -18,7 +19,8 @@ document.addEventListener('pointerdown',()=>audio.unlock(),{capture:true});
 document.addEventListener('keydown',()=>audio.unlock(),{capture:true});
 const input={mx:0,my:0,attack:false,defend:false,revive:false},keys=new Set(),holds=new Set(),actions=[];
 let joy={mx:0,my:0},selfId='solo',lastTick=performance.now();
-renderer.load('characters/hero-poses-v3.png').ready.then(img=>{if(img.loaded)for(const figure of document.querySelectorAll('.hero-figure'))figure.classList.add('atlas');});
+renderer.ready.then(()=>console.log('[rescue-doubao][assets] preload-ready',{at:new Date().toISOString()}));
+renderer.load('characters/hero-poses-v3.png').ready.then(img=>{console.log('[rescue-doubao][assets] hero-poses-ready',{loaded:!!img.loaded,failed:!!img.failed});if(img.loaded)for(const figure of document.querySelectorAll('.hero-figure'))figure.classList.add('atlas');});
 function toast(message){$('#toast').textContent=message;$('#toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').hidden=true,4500);}
 function status(message,error=false){$('#connection-status').textContent=message;$('#connection-status').classList.toggle('error',error);}
 const net=new RoomNetwork({
@@ -47,14 +49,14 @@ function updateLobby(value){
 }
 function setBusy(b){for(const id of ['create','join','solo'])$('#'+id).disabled=b;}
 async function connect(host){
-  audio.start();setBusy(true);try{solo=false;const name=$('#nickname').value;try{localStorage.setItem('naiwa-coop-name',name);}catch{}await net.open(host,$('#room-input').value,name);}
-  catch(e){audio.stop();net.close();showEntry();status(e.message,true);}finally{setBusy(false);}
+  audio.start();setBusy(true);const startedAt=performance.now();console.log('[rescue-doubao][network] ui:connect-click',{host,room:$('#room-input').value});try{solo=false;const name=$('#nickname').value;try{localStorage.setItem('naiwa-coop-name',name);}catch{}await net.open(host,$('#room-input').value,name);console.log('[rescue-doubao][network] ui:connect-resolved',{host,room:net.code,elapsedMs:Math.round(performance.now()-startedAt)});}
+  catch(e){console.error('[rescue-doubao][network] ui:connect-failed',e);audio.stop();net.close();showEntry();status(e.message,true);}finally{setBusy(false);}
 }
 $('#create').onclick=()=>connect(true);$('#join').onclick=()=>connect(false);$('#room-input').oninput=e=>{e.target.value=e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,'');};
 $('#room-input').onkeydown=e=>{if(e.key==='Enter')connect(false);};
 $('#ready').onclick=()=>net.setReady(!ready);
-$('#start').onclick=async()=>{audio.start();void landscape.enter();const button=$('#start');button.disabled=true;await renderer.ready;if(net.start()){solo=false;selfId=net.selfId;model=new CoopBattle(net.members);model.start();receive(model.snapshot());}else button.disabled=false;};
-$('#solo').onclick=async()=>{audio.start();void landscape.enter();setBusy(true);await renderer.ready;setBusy(false);net.close();solo=true;selfId='solo';model=new CoopBattle([{id:selfId,name:$('#nickname').value}]);model.start();receive(model.snapshot());};
+$('#start').onclick=async()=>{audio.start();void landscape.enter();const button=$('#start');button.disabled=true;const startedAt=performance.now();console.log('[rescue-doubao][scene] start-click',{mode:'coop',zone:0});await renderer.ready;console.log('[rescue-doubao][scene] assets-ready-before-start',{mode:'coop',elapsedMs:Math.round(performance.now()-startedAt)});if(net.start()){solo=false;selfId=net.selfId;model=new CoopBattle(net.members);model.start();receive(model.snapshot());}else button.disabled=false;};
+$('#solo').onclick=async()=>{audio.start();void landscape.enter();setBusy(true);const startedAt=performance.now();console.log('[rescue-doubao][scene] start-click',{mode:'solo',zone:0});await renderer.ready;console.log('[rescue-doubao][scene] assets-ready-before-start',{mode:'solo',elapsedMs:Math.round(performance.now()-startedAt)});setBusy(false);net.close();solo=true;selfId='solo';model=new CoopBattle([{id:selfId,name:$('#nickname').value}]);model.start();receive(model.snapshot());};
 $('#leave').onclick=()=>{audio.stop();net.close();lobby=null;showEntry();status('免下载 · 电脑与手机可一起玩');};
 $('#copy').onclick=async()=>{const url=new URL(location.href);url.search='';url.searchParams.set('room',net.code);try{await navigator.clipboard.writeText('一起来玩《营救豆包》！房间码：'+net.code+'\n'+url.href);toast('邀请链接和房间码已复制');}catch{toast('房间码：'+net.code+'，可直接告诉朋友。');}};
 $('#help-open').onclick=()=>$('#help').showModal();$('#help-close').onclick=()=>$('#help').close();
@@ -81,8 +83,10 @@ function exitGame(){landscape.leave();audio.stop();resetInput();model=null;state
 $('#game-exit').onclick=exitGame;
 function receive(value){
   if(!value||!ZONES[value.zone])return;
+  const sceneChanged=!state||state.sceneId!==value.sceneId||state.zone!==value.zone;
+  if(sceneChanged)console.log('[rescue-doubao][scene] state-received',{zone:value.zone,chapter:value.zone+1,name:ZONES[value.zone].name,sceneId:value.sceneId,phase:value.phase,at:new Date().toISOString()});
   if(value.effectsDelta){if(!state||state.sceneId!==value.sceneId||value.clock<state.clock)receivedEffects.clear();for(const e of value.effects)receivedEffects.set(e.eid,e);for(const [id,e]of receivedEffects)if(value.clock-e.at>(e.duration||1.15))receivedEffects.delete(id);value={...value,effects:[...receivedEffects.values()]};}
-  state=value;if(!inGame){audio.start();inGame=true;$('#game').hidden=false;$('#home').hidden=true;landscape.setPlaying(true);resetInput();modalKey='';lastZone=-1;lastTick=performance.now();accumulator=0;renderer.resize();}
+  state=value;if(!inGame){audio.start();inGame=true;$('#game').hidden=false;$('#home').hidden=true;landscape.setPlaying(true);resetInput();modalKey='';lastZone=-1;lastTick=performance.now();accumulator=0;renderer.resize();console.log('[rescue-doubao][scene] game-visible',{zone:value.zone,sceneId:value.sceneId,canvas:{width:renderer.canvas.width,height:renderer.canvas.height},at:new Date().toISOString()});}
   renderer.selfId=selfId;renderer.liveModel=model;renderer.update(value);
   if(performance.now()-lastHUD>=95||lastHUDPhase!==value.phase){lastHUD=performance.now();lastHUDPhase=value.phase;updateHUD(value);}updateModal(value);
   if(value.zone!==lastZone){lastZone=value.zone;$('#chapter-banner').textContent='第 '+(value.zone+1)+' 章 · '+ZONES[value.zone].name;$('#chapter-banner').hidden=false;setTimeout(()=>$('#chapter-banner').hidden=true,2200);}

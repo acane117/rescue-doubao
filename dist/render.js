@@ -6,12 +6,15 @@ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const warning=t=>t.endsWith('Warning')||t==='warning';
 export class Renderer {
   constructor(canvas){
-    this.canvas=canvas;this.ctx=canvas.getContext('2d',{alpha:false});this.images=new Map();this.labels=new Map();this.tracks=new Map();this.walks=new Map();this.state=null;this.liveModel=null;this.last=0;this.lastZone=-1;this.camera={x:0,y:0};this.selfId='';this.input={mx:0,my:0};this.packetAt=0;this.frames=[];this.drawCosts=[];this.entities=[];
+    this.canvas=canvas;this.ctx=canvas.getContext('2d',{alpha:false});this.images=new Map();this.labels=new Map();this.tracks=new Map();this.walks=new Map();this.state=null;this.liveModel=null;this.last=0;this.lastZone=-1;this.lastSceneId='';this.camera={x:0,y:0};this.selfId='';this.input={mx:0,my:0};this.packetAt=0;this.frames=[];this.drawCosts=[];this.entities=[];this.loggedScenes=new Set();
     this.bullets={friendly:this.bullet('#ffedac','#fffdf0'),enemy:this.bullet('#cfa9f4','#f1deff')};
     this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(canvas.parentElement);
     // Load every chapter before starting, rather than first requesting its map
     // while combat is already running. Failed requests still settle ready.
-    this.ready=Promise.all(['characters/hero-walk-v3.png','characters/hero-poses-v3.png','characters/hero-run','characters/hero-idle',...ZONES.map(zone=>'backgrounds/'+zone.background),'characters/chaser','characters/shooter','characters/crate'].map(k=>this.load(k).ready));
+    const characterKinds=Object.keys(SIZES).filter(kind=>kind!=='hero');
+    const bossVariants=characterKinds.filter(kind=>isBoss(kind)).flatMap(kind=>['characters/boss-variants/'+kind+'-attack','characters/boss-variants/'+kind+'-phase2']);
+    const preload=[...new Set(['characters/hero-walk-v3.png','characters/hero-poses-v3.png','characters/hero-run','characters/hero-idle',...ZONES.map(zone=>'backgrounds/'+zone.background),...characterKinds.map(kind=>'characters/'+kind),...bossVariants,'characters/princess','characters/naidan-call','characters/naidan-laugh','characters/naidan-idle'])];console.log('[rescue-doubao][assets] preload-start',{count:preload.length,at:new Date().toISOString()});
+    this.ready=Promise.all(preload.map(k=>this.load(k).ready)).then(images=>{console.log('[rescue-doubao][assets] preload-settled',{count:images.length,loaded:images.filter(img=>img.loaded).length,failed:images.filter(img=>img.failed).length,at:new Date().toISOString()});return images;});
   }
   resize(){const width=this.canvas.clientWidth,height=this.canvas.clientHeight;if(width<2||height<2)return;const size=backingSize(width,height,devicePixelRatio||1);if(this.canvas.width!==size.width||this.canvas.height!==size.height){this.canvas.width=size.width;this.canvas.height=size.height;}this.ctx.imageSmoothingEnabled=true;this.ctx.imageSmoothingQuality='high';}
   load(name,{retry=false}={}){
@@ -101,6 +104,8 @@ export class Renderer {
     const me=s.players.find(p=>p.id===this.selfId&&p.connected)||s.players.find(p=>p.connected),local=me?this.position('p'+me.id,me.hero,dt):null;
     this.camera=followCamera(this.camera,local,s.arenaScale);
     const worldWidth=1280*s.arenaScale,worldHeight=720*s.arenaScale,bg=this.load('backgrounds/'+ZONES[s.zone].background);
+    const loggedScenes=this.loggedScenes||(this.loggedScenes=new Set());
+    if(!loggedScenes.has(s.sceneId)){loggedScenes.add(s.sceneId);console.log('[rescue-doubao][scene] first-frame',{zone:s.zone,sceneId:s.sceneId,background:bg.src,backgroundLoaded:!!bg.loaded,backgroundFailed:!!bg.failed,at:new Date().toISOString()});}
     if(bg.loaded)c.drawImage(bg,-this.camera.x,-this.camera.y,worldWidth,worldHeight);
     c.save();c.translate(-this.camera.x,-this.camera.y);
     for(const e of s.effects||[])if(warning(e.type))this.effect(e,s.clock,true);
